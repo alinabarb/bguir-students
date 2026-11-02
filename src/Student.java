@@ -11,6 +11,12 @@ public class Student {
         id = nextId;
         nextId++;
     }
+    public Student(String n, int g){
+        this(n,g,0.0);
+    }
+    public boolean HasHigherMark(Student otherStudent){
+        return this.averageMark > otherStudent.averageMark;
+    }
     public String getName(){
         return name;
     }
