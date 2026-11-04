@@ -1,4 +1,4 @@
-
+package by.bsuir.students;
 public class Main {
     public static void main(String[] args) {
         var alina = new Student("Alina", 400512, 5.0);

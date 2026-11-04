@@ -1,3 +1,9 @@
+package by.bsuir.students;
+
+/**
+ * Объект типа <code>Student</code> описывает id, имя, группу и средний балл студента
+ * @author Alina Barbashova
+ */
 public class Student {
     private String name;
     private int groupNumber;
@@ -14,6 +20,11 @@ public class Student {
     public Student(String n, int g){
         this(n,g,0.0);
     }
+
+    /**
+     * @param otherStudent является студентом с которым сравнивают оценку текущего студента
+     * @return возвращает true если оценка текущего выше и false - если ниже
+     */
     public boolean HasHigherMark(Student otherStudent){
         return this.averageMark > otherStudent.averageMark;
     }
