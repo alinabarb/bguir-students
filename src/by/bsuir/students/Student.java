@@ -34,4 +34,8 @@ public class Student {
     public int getId(){
         return id;
     }
+
+    public String toString(){
+        return String.format("Student: name = %s, groupNumber = %d", name, groupNumber);
+    }
 }
