@@ -10,15 +10,17 @@ public class Student {
     private double averageMark;
     private int id;
     private static int nextId =1;
-    public Student(String n, int g, double m){
-        name = n;
-        groupNumber = g;
-        averageMark = m;
+    private Faculty faculty;
+    public Student(String name, int groupName, double averageMark, Faculty faculty){
+        this.name = name;
+        this.groupNumber = groupName;
+        this.averageMark = averageMark;
+        this.faculty = faculty;
         id = nextId;
         nextId++;
     }
-    public Student(String n, int g){
-        this(n,g,0.0);
+    public Student(String name, int groupName, Faculty faculty){
+        this(name, groupName, 0.0, faculty);
     }
 
     /**
@@ -34,8 +36,9 @@ public class Student {
     public int getId(){
         return id;
     }
-
+    public double getAverageMark(){ return averageMark;}
+    @Override
     public String toString(){
-        return String.format("Student: name = %s, groupNumber = %d", name, groupNumber);
+        return String.format("Student: name = %s, faculty = %s, groupNumber = %d", name, faculty, groupNumber);
     }
 }
